@@ -2,6 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>My New Hugo Site</title>
+<<<<<<< HEAD
     <link>http://localhost:34197/</link>
     <description>Recent content on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
@@ -64,5 +65,20 @@
       <guid>http://localhost:34197/content/private/</guid>
       <description>A private gallery that is only available by direct link.</description>
     </item>
+=======
+    <link>http://localhost:44453/</link>
+    <description>Recent content on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 13 Mar 2024 20:29:54 +0800</lastBuildDate>
+    <atom:link href="http://localhost:44453/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My First Post111</title>
+      <link>http://localhost:44453/post/my-first-post/</link>
+      <pubDate>Wed, 13 Mar 2024 20:29:54 +0800</pubDate>
+      <guid>http://localhost:44453/post/my-first-post/</guid>
+      <description></description>
+    </item>
+>>>>>>> 3c1cbc4 (abcdefg)
   </channel>
 </rss>
