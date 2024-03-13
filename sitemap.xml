@@ -2,14 +2,39 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://example.org/</loc>
-    <lastmod>2024-03-13T20:29:54+08:00</lastmod>
+    <loc>http://localhost:34197/content/animals/</loc>
+    <lastmod>2023-04-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/post/</loc>
-    <lastmod>2024-03-13T20:29:54+08:00</lastmod>
+    <loc>http://localhost:34197/content/fashion-beauty/</loc>
   </url><url>
-    <loc>https://example.org/categories/</loc>
+    <loc>http://localhost:34197/content/nature/</loc>
   </url><url>
-    <loc>https://example.org/tags/</loc>
+    <loc>http://localhost:34197/</loc>
+    <lastmod>2024-03-13T22:04:58+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:34197/post/</loc>
+    <lastmod>2024-03-13T22:04:58+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:34197/content/animals/cats/</loc>
+    <lastmod>2023-04-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:34197/content/</loc>
+    <lastmod>2023-04-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:34197/content/animals/dogs/</loc>
+    <lastmod>2023-01-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:34197/content/featured-album/</loc>
+    <lastmod>2023-01-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:34197/content/about/</loc>
+  </url><url>
+    <loc>http://localhost:34197/categories/</loc>
+  </url><url>
+    <loc>http://localhost:34197/content/imprint/</loc>
+  </url><url>
+    <loc>http://localhost:34197/content/private/</loc>
+  </url><url>
+    <loc>http://localhost:34197/tags/</loc>
   </url>
 </urlset>
