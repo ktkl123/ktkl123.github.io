@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>My New Hugo Site</title>
+<meta name="keywords" content="">
+<meta name="description" content="Linux系统安装 安装前准备： 安装介质和系统（U盘、光盘、硬盘等）
+安装的空闲设备（新加硬盘或者为自己电脑安装文件分区）
+第一步：在Linux官网下载linux光盘文件镜像 进入Linux的官方网站Enterprise Open Source and Linux | Ubuntu后，选择右上角的get Ubuntu选择下载，把下载好的文件拷到自己的u盘上。
+第二步：为Linux系统镜像文件分盘空间 在这一步中，我们将为您下载的Linux系统镜像文件分配一个合适的存储空间。请按照以下步骤操作：
+1.首先，打开“我的电脑”或“此电脑”，这通常可以通过点击桌面上的图标或在文件浏览器中找到。
+2.接着，右键点击您的计算机图标，选择“管理”选项。这将打开计算机管理窗口，其中包含了设备管理、磁盘管理等多个选项。
+3.在计算机管理窗口中，找到左侧的“磁盘管理”选项并点击，这将显示您计算机上所有磁盘分区的详细信息。
+4.接下来，您需要在C盘上释放空间。右键点击C盘（通常是系统盘），选择“压缩卷”选项。
+5.在弹出的压缩对话框中，您需要指定要压缩的空间大小。为了确保Linux系统有足够的空间运行，建议将压缩后的新空间大小设置在30GB以上。您可以根据实际需要调整此数值。
+6.确认压缩空间大小后，点击“压缩”按钮。系统将执行压缩操作，并在完成后显示一个新的未分配空间区域。
+注意事项：
+1.在进行磁盘压缩之前，请确保您的重要数据已经备份，以防万一操作过程中发生数据丢失。
+2.压缩磁盘分区时，确保您的计算机有足够的连续空间进行操作，避免因空间碎片化导致无法压缩到期望的大小。
+第三步：创建新的分区 1.初始化未分配空间：在磁盘管理工具中，您会看到之前压缩出来的未分配空间。右键点击这个空间，选择“新建简单卷”。
+2.设置分区大小：在新建简单卷的向导中，您不需要更改任何设置，因为未分配空间已经足够大，可以容纳Linux系统。点击“下一步”继续。
+3.分配驱动器字母：系统会自动为您的新分区分配一个驱动器字母。通常，这个驱动器字母会是逻辑驱动器，例如D:、E:等。点击“下一步”继续。
+4.格式化分区：选择文件系统类型。对于Linux系统，通常选择“exFAT”或者“NTFS”。如果您打算使用Linux特定的文件系统（如ext4），则需要在安装Linux时进行格式化。完成设置后，点击“下一步”。
+5.完成分区创建：检查所有设置是否正确无误，然后点击“完成”来创建新分区。完成后，您会看到新的分区在磁盘管理中显示。
+第四步：安装Linux系统
+1.准备安装介质：确保您的Linux发行版光盘镜像文件已经下载完成，并且已经制作成启动U盘或者烧录到CD/DVD上。
+2.重启计算机：插入启动介质，然后重启您的计算机。
+3.进入BIOS/UEFI设置：在计算机启动过程中，进入BIOS/UEFI设置（通常是在启动时按F2、Del或其他特定键，我的联想是F12），并设置从U盘启动。
+4.启动Linux安装程序：计算机将从启动介质加载Linux安装程序。按照屏幕上的指示进行操作。
+5.选择安装位置：在安装过程中，选择“自定义分区”或类似选项，然后选择您刚刚创建的新分区作为安装Linux的位置。
+6.格式化分区：如果之前没有格式化分区，安装程序通常会提示您格式化分区。选择“ext4”或其他适合您Linux发行版的文件系统类型。
+7.完成安装：继续按照安装向导的步骤完成安装。这可能包括设置用户账户、网络设置等。
+8.重启并启动Linux：安装完成后，从启动介质中移除U盘，并重启计算机。现在，您应该能够启动并使用您的新Linux系统了。">
+<meta name="author" content="">
+<link rel="canonical" href="https://ktkl123.github.io/post/linux%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.b609c58d5c11bb90b1a54e04005d74ad1ddf22165eb79f5533967e57df9c3b50.css" integrity="sha256-tgnFjVwRu5CxpU4EAF10rR3fIhZet59VM5Z&#43;V9&#43;cO1A=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://ktkl123.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://ktkl123.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://ktkl123.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://ktkl123.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://ktkl123.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://ktkl123.github.io/post/linux%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="" />
+<meta property="og:description" content="Linux系统安装 安装前准备： 安装介质和系统（U盘、光盘、硬盘等）
+安装的空闲设备（新加硬盘或者为自己电脑安装文件分区）
+第一步：在Linux官网下载linux光盘文件镜像 进入Linux的官方网站Enterprise Open Source and Linux | Ubuntu后，选择右上角的get Ubuntu选择下载，把下载好的文件拷到自己的u盘上。
+第二步：为Linux系统镜像文件分盘空间 在这一步中，我们将为您下载的Linux系统镜像文件分配一个合适的存储空间。请按照以下步骤操作：
+1.首先，打开“我的电脑”或“此电脑”，这通常可以通过点击桌面上的图标或在文件浏览器中找到。
+2.接着，右键点击您的计算机图标，选择“管理”选项。这将打开计算机管理窗口，其中包含了设备管理、磁盘管理等多个选项。
+3.在计算机管理窗口中，找到左侧的“磁盘管理”选项并点击，这将显示您计算机上所有磁盘分区的详细信息。
+4.接下来，您需要在C盘上释放空间。右键点击C盘（通常是系统盘），选择“压缩卷”选项。
+5.在弹出的压缩对话框中，您需要指定要压缩的空间大小。为了确保Linux系统有足够的空间运行，建议将压缩后的新空间大小设置在30GB以上。您可以根据实际需要调整此数值。
+6.确认压缩空间大小后，点击“压缩”按钮。系统将执行压缩操作，并在完成后显示一个新的未分配空间区域。
+注意事项：
+1.在进行磁盘压缩之前，请确保您的重要数据已经备份，以防万一操作过程中发生数据丢失。
+2.压缩磁盘分区时，确保您的计算机有足够的连续空间进行操作，避免因空间碎片化导致无法压缩到期望的大小。
+第三步：创建新的分区 1.初始化未分配空间：在磁盘管理工具中，您会看到之前压缩出来的未分配空间。右键点击这个空间，选择“新建简单卷”。
+2.设置分区大小：在新建简单卷的向导中，您不需要更改任何设置，因为未分配空间已经足够大，可以容纳Linux系统。点击“下一步”继续。
+3.分配驱动器字母：系统会自动为您的新分区分配一个驱动器字母。通常，这个驱动器字母会是逻辑驱动器，例如D:、E:等。点击“下一步”继续。
+4.格式化分区：选择文件系统类型。对于Linux系统，通常选择“exFAT”或者“NTFS”。如果您打算使用Linux特定的文件系统（如ext4），则需要在安装Linux时进行格式化。完成设置后，点击“下一步”。
+5.完成分区创建：检查所有设置是否正确无误，然后点击“完成”来创建新分区。完成后，您会看到新的分区在磁盘管理中显示。
+第四步：安装Linux系统
+1.准备安装介质：确保您的Linux发行版光盘镜像文件已经下载完成，并且已经制作成启动U盘或者烧录到CD/DVD上。
+2.重启计算机：插入启动介质，然后重启您的计算机。
+3.进入BIOS/UEFI设置：在计算机启动过程中，进入BIOS/UEFI设置（通常是在启动时按F2、Del或其他特定键，我的联想是F12），并设置从U盘启动。
+4.启动Linux安装程序：计算机将从启动介质加载Linux安装程序。按照屏幕上的指示进行操作。
+5.选择安装位置：在安装过程中，选择“自定义分区”或类似选项，然后选择您刚刚创建的新分区作为安装Linux的位置。
+6.格式化分区：如果之前没有格式化分区，安装程序通常会提示您格式化分区。选择“ext4”或其他适合您Linux发行版的文件系统类型。
+7.完成安装：继续按照安装向导的步骤完成安装。这可能包括设置用户账户、网络设置等。
+8.重启并启动Linux：安装完成后，从启动介质中移除U盘，并重启计算机。现在，您应该能够启动并使用您的新Linux系统了。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ktkl123.github.io/post/linux%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/" /><meta property="article:section" content="post" />
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="Linux系统安装 安装前准备： 安装介质和系统（U盘、光盘、硬盘等）
+安装的空闲设备（新加硬盘或者为自己电脑安装文件分区）
+第一步：在Linux官网下载linux光盘文件镜像 进入Linux的官方网站Enterprise Open Source and Linux | Ubuntu后，选择右上角的get Ubuntu选择下载，把下载好的文件拷到自己的u盘上。
+第二步：为Linux系统镜像文件分盘空间 在这一步中，我们将为您下载的Linux系统镜像文件分配一个合适的存储空间。请按照以下步骤操作：
+1.首先，打开“我的电脑”或“此电脑”，这通常可以通过点击桌面上的图标或在文件浏览器中找到。
+2.接着，右键点击您的计算机图标，选择“管理”选项。这将打开计算机管理窗口，其中包含了设备管理、磁盘管理等多个选项。
+3.在计算机管理窗口中，找到左侧的“磁盘管理”选项并点击，这将显示您计算机上所有磁盘分区的详细信息。
+4.接下来，您需要在C盘上释放空间。右键点击C盘（通常是系统盘），选择“压缩卷”选项。
+5.在弹出的压缩对话框中，您需要指定要压缩的空间大小。为了确保Linux系统有足够的空间运行，建议将压缩后的新空间大小设置在30GB以上。您可以根据实际需要调整此数值。
+6.确认压缩空间大小后，点击“压缩”按钮。系统将执行压缩操作，并在完成后显示一个新的未分配空间区域。
+注意事项：
+1.在进行磁盘压缩之前，请确保您的重要数据已经备份，以防万一操作过程中发生数据丢失。
+2.压缩磁盘分区时，确保您的计算机有足够的连续空间进行操作，避免因空间碎片化导致无法压缩到期望的大小。
+第三步：创建新的分区 1.初始化未分配空间：在磁盘管理工具中，您会看到之前压缩出来的未分配空间。右键点击这个空间，选择“新建简单卷”。
+2.设置分区大小：在新建简单卷的向导中，您不需要更改任何设置，因为未分配空间已经足够大，可以容纳Linux系统。点击“下一步”继续。
+3.分配驱动器字母：系统会自动为您的新分区分配一个驱动器字母。通常，这个驱动器字母会是逻辑驱动器，例如D:、E:等。点击“下一步”继续。
+4.格式化分区：选择文件系统类型。对于Linux系统，通常选择“exFAT”或者“NTFS”。如果您打算使用Linux特定的文件系统（如ext4），则需要在安装Linux时进行格式化。完成设置后，点击“下一步”。
+5.完成分区创建：检查所有设置是否正确无误，然后点击“完成”来创建新分区。完成后，您会看到新的分区在磁盘管理中显示。
+第四步：安装Linux系统
+1.准备安装介质：确保您的Linux发行版光盘镜像文件已经下载完成，并且已经制作成启动U盘或者烧录到CD/DVD上。
+2.重启计算机：插入启动介质，然后重启您的计算机。
+3.进入BIOS/UEFI设置：在计算机启动过程中，进入BIOS/UEFI设置（通常是在启动时按F2、Del或其他特定键，我的联想是F12），并设置从U盘启动。
+4.启动Linux安装程序：计算机将从启动介质加载Linux安装程序。按照屏幕上的指示进行操作。
+5.选择安装位置：在安装过程中，选择“自定义分区”或类似选项，然后选择您刚刚创建的新分区作为安装Linux的位置。
+6.格式化分区：如果之前没有格式化分区，安装程序通常会提示您格式化分区。选择“ext4”或其他适合您Linux发行版的文件系统类型。
+7.完成安装：继续按照安装向导的步骤完成安装。这可能包括设置用户账户、网络设置等。
+8.重启并启动Linux：安装完成后，从启动介质中移除U盘，并重启计算机。现在，您应该能够启动并使用您的新Linux系统了。"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://ktkl123.github.io/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "",
+      "item": "https://ktkl123.github.io/post/linux%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "",
+  "name": "",
+  "description": "Linux系统安装 安装前准备： 安装介质和系统（U盘、光盘、硬盘等）\n安装的空闲设备（新加硬盘或者为自己电脑安装文件分区）\n第一步：在Linux官网下载linux光盘文件镜像 进入Linux的官方网站Enterprise Open Source and Linux | Ubuntu后，选择右上角的get Ubuntu选择下载，把下载好的文件拷到自己的u盘上。\n第二步：为Linux系统镜像文件分盘空间 在这一步中，我们将为您下载的Linux系统镜像文件分配一个合适的存储空间。请按照以下步骤操作：\n1.首先，打开“我的电脑”或“此电脑”，这通常可以通过点击桌面上的图标或在文件浏览器中找到。\n2.接着，右键点击您的计算机图标，选择“管理”选项。这将打开计算机管理窗口，其中包含了设备管理、磁盘管理等多个选项。\n3.在计算机管理窗口中，找到左侧的“磁盘管理”选项并点击，这将显示您计算机上所有磁盘分区的详细信息。\n4.接下来，您需要在C盘上释放空间。右键点击C盘（通常是系统盘），选择“压缩卷”选项。\n5.在弹出的压缩对话框中，您需要指定要压缩的空间大小。为了确保Linux系统有足够的空间运行，建议将压缩后的新空间大小设置在30GB以上。您可以根据实际需要调整此数值。\n6.确认压缩空间大小后，点击“压缩”按钮。系统将执行压缩操作，并在完成后显示一个新的未分配空间区域。\n注意事项：\n1.在进行磁盘压缩之前，请确保您的重要数据已经备份，以防万一操作过程中发生数据丢失。\n2.压缩磁盘分区时，确保您的计算机有足够的连续空间进行操作，避免因空间碎片化导致无法压缩到期望的大小。\n第三步：创建新的分区 1.初始化未分配空间：在磁盘管理工具中，您会看到之前压缩出来的未分配空间。右键点击这个空间，选择“新建简单卷”。\n2.设置分区大小：在新建简单卷的向导中，您不需要更改任何设置，因为未分配空间已经足够大，可以容纳Linux系统。点击“下一步”继续。\n3.分配驱动器字母：系统会自动为您的新分区分配一个驱动器字母。通常，这个驱动器字母会是逻辑驱动器，例如D:、E:等。点击“下一步”继续。\n4.格式化分区：选择文件系统类型。对于Linux系统，通常选择“exFAT”或者“NTFS”。如果您打算使用Linux特定的文件系统（如ext4），则需要在安装Linux时进行格式化。完成设置后，点击“下一步”。\n5.完成分区创建：检查所有设置是否正确无误，然后点击“完成”来创建新分区。完成后，您会看到新的分区在磁盘管理中显示。\n第四步：安装Linux系统\n1.准备安装介质：确保您的Linux发行版光盘镜像文件已经下载完成，并且已经制作成启动U盘或者烧录到CD/DVD上。\n2.重启计算机：插入启动介质，然后重启您的计算机。\n3.进入BIOS/UEFI设置：在计算机启动过程中，进入BIOS/UEFI设置（通常是在启动时按F2、Del或其他特定键，我的联想是F12），并设置从U盘启动。\n4.启动Linux安装程序：计算机将从启动介质加载Linux安装程序。按照屏幕上的指示进行操作。\n5.选择安装位置：在安装过程中，选择“自定义分区”或类似选项，然后选择您刚刚创建的新分区作为安装Linux的位置。\n6.格式化分区：如果之前没有格式化分区，安装程序通常会提示您格式化分区。选择“ext4”或其他适合您Linux发行版的文件系统类型。\n7.完成安装：继续按照安装向导的步骤完成安装。这可能包括设置用户账户、网络设置等。\n8.重启并启动Linux：安装完成后，从启动介质中移除U盘，并重启计算机。现在，您应该能够启动并使用您的新Linux系统了。",
+  "keywords": [
+    
+  ],
+  "articleBody": "Linux系统安装 安装前准备： 安装介质和系统（U盘、光盘、硬盘等）\n安装的空闲设备（新加硬盘或者为自己电脑安装文件分区）\n第一步：在Linux官网下载linux光盘文件镜像 进入Linux的官方网站Enterprise Open Source and Linux | Ubuntu后，选择右上角的get Ubuntu选择下载，把下载好的文件拷到自己的u盘上。\n第二步：为Linux系统镜像文件分盘空间 在这一步中，我们将为您下载的Linux系统镜像文件分配一个合适的存储空间。请按照以下步骤操作：\n1.首先，打开“我的电脑”或“此电脑”，这通常可以通过点击桌面上的图标或在文件浏览器中找到。\n2.接着，右键点击您的计算机图标，选择“管理”选项。这将打开计算机管理窗口，其中包含了设备管理、磁盘管理等多个选项。\n3.在计算机管理窗口中，找到左侧的“磁盘管理”选项并点击，这将显示您计算机上所有磁盘分区的详细信息。\n4.接下来，您需要在C盘上释放空间。右键点击C盘（通常是系统盘），选择“压缩卷”选项。\n5.在弹出的压缩对话框中，您需要指定要压缩的空间大小。为了确保Linux系统有足够的空间运行，建议将压缩后的新空间大小设置在30GB以上。您可以根据实际需要调整此数值。\n6.确认压缩空间大小后，点击“压缩”按钮。系统将执行压缩操作，并在完成后显示一个新的未分配空间区域。\n注意事项：\n1.在进行磁盘压缩之前，请确保您的重要数据已经备份，以防万一操作过程中发生数据丢失。\n2.压缩磁盘分区时，确保您的计算机有足够的连续空间进行操作，避免因空间碎片化导致无法压缩到期望的大小。\n第三步：创建新的分区 1.初始化未分配空间：在磁盘管理工具中，您会看到之前压缩出来的未分配空间。右键点击这个空间，选择“新建简单卷”。\n2.设置分区大小：在新建简单卷的向导中，您不需要更改任何设置，因为未分配空间已经足够大，可以容纳Linux系统。点击“下一步”继续。\n3.分配驱动器字母：系统会自动为您的新分区分配一个驱动器字母。通常，这个驱动器字母会是逻辑驱动器，例如D:、E:等。点击“下一步”继续。\n4.格式化分区：选择文件系统类型。对于Linux系统，通常选择“exFAT”或者“NTFS”。如果您打算使用Linux特定的文件系统（如ext4），则需要在安装Linux时进行格式化。完成设置后，点击“下一步”。\n5.完成分区创建：检查所有设置是否正确无误，然后点击“完成”来创建新分区。完成后，您会看到新的分区在磁盘管理中显示。\n第四步：安装Linux系统\n1.准备安装介质：确保您的Linux发行版光盘镜像文件已经下载完成，并且已经制作成启动U盘或者烧录到CD/DVD上。\n2.重启计算机：插入启动介质，然后重启您的计算机。\n3.进入BIOS/UEFI设置：在计算机启动过程中，进入BIOS/UEFI设置（通常是在启动时按F2、Del或其他特定键，我的联想是F12），并设置从U盘启动。\n4.启动Linux安装程序：计算机将从启动介质加载Linux安装程序。按照屏幕上的指示进行操作。\n5.选择安装位置：在安装过程中，选择“自定义分区”或类似选项，然后选择您刚刚创建的新分区作为安装Linux的位置。\n6.格式化分区：如果之前没有格式化分区，安装程序通常会提示您格式化分区。选择“ext4”或其他适合您Linux发行版的文件系统类型。\n7.完成安装：继续按照安装向导的步骤完成安装。这可能包括设置用户账户、网络设置等。\n8.重启并启动Linux：安装完成后，从启动介质中移除U盘，并重启计算机。现在，您应该能够启动并使用您的新Linux系统了。\n",
+  "wordCount" : "39",
+  "inLanguage": "en",
+  "datePublished": "0001-01-01T00:00:00Z",
+  "dateModified": "0001-01-01T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://ktkl123.github.io/post/linux%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "My New Hugo Site",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ktkl123.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://ktkl123.github.io/" accesskey="h" title="My New Hugo Site (Alt + H)">My New Hugo Site</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      
+    </h1>
+    <div class="post-meta">
+
+</div>
+  </header> 
+  <div class="post-content"><h1 id="linux系统安装"><strong>Linux系统安装</strong><a hidden class="anchor" aria-hidden="true" href="#linux系统安装">#</a></h1>
+<h4 id="安装前准备">安装前准备：<a hidden class="anchor" aria-hidden="true" href="#安装前准备">#</a></h4>
+<p>安装介质和系统（U盘、光盘、硬盘等）</p>
+<p>安装的空闲设备（新加硬盘或者为自己电脑安装文件分区）</p>
+<h5 id="第一步在linux官网下载linux光盘文件镜像">第一步：在Linux官网下载linux光盘文件镜像<a hidden class="anchor" aria-hidden="true" href="#第一步在linux官网下载linux光盘文件镜像">#</a></h5>
+<p>进入Linux的官方网站<a href="https://ubuntu.com/">Enterprise Open Source and Linux | Ubuntu</a>后，选择右上角的get Ubuntu选择下载，把下载好的文件拷到自己的u盘上。</p>
+<h5 id="第二步为linux系统镜像文件分盘空间">第二步：为Linux系统镜像文件分盘空间<a hidden class="anchor" aria-hidden="true" href="#第二步为linux系统镜像文件分盘空间">#</a></h5>
+<p>在这一步中，我们将为您下载的Linux系统镜像文件分配一个合适的存储空间。请按照以下步骤操作：</p>
+<p>1.首先，打开“我的电脑”或“此电脑”，这通常可以通过点击桌面上的图标或在文件浏览器中找到。</p>
+<p>2.接着，右键点击您的计算机图标，选择“管理”选项。这将打开计算机管理窗口，其中包含了设备管理、磁盘管理等多个选项。</p>
+<p>3.在计算机管理窗口中，找到左侧的“磁盘管理”选项并点击，这将显示您计算机上所有磁盘分区的详细信息。</p>
+<p>4.接下来，您需要在C盘上释放空间。右键点击C盘（通常是系统盘），选择“压缩卷”选项。</p>
+<p>5.在弹出的压缩对话框中，您需要指定要压缩的空间大小。为了确保Linux系统有足够的空间运行，建议将压缩后的新空间大小设置在30GB以上。您可以根据实际需要调整此数值。</p>
+<p>6.确认压缩空间大小后，点击“压缩”按钮。系统将执行压缩操作，并在完成后显示一个新的未分配空间区域。</p>
+<p>注意事项：</p>
+<p>1.在进行磁盘压缩之前，请确保您的重要数据已经备份，以防万一操作过程中发生数据丢失。</p>
+<p>2.压缩磁盘分区时，确保您的计算机有足够的连续空间进行操作，避免因空间碎片化导致无法压缩到期望的大小。</p>
+<h5 id="第三步创建新的分区">第三步：创建新的分区<a hidden class="anchor" aria-hidden="true" href="#第三步创建新的分区">#</a></h5>
+<p>1.初始化未分配空间：在磁盘管理工具中，您会看到之前压缩出来的未分配空间。右键点击这个空间，选择“新建简单卷”。</p>
+<p>2.设置分区大小：在新建简单卷的向导中，您不需要更改任何设置，因为未分配空间已经足够大，可以容纳Linux系统。点击“下一步”继续。</p>
+<p>3.分配驱动器字母：系统会自动为您的新分区分配一个驱动器字母。通常，这个驱动器字母会是逻辑驱动器，例如D:、E:等。点击“下一步”继续。</p>
+<p>4.格式化分区：选择文件系统类型。对于Linux系统，通常选择“exFAT”或者“NTFS”。如果您打算使用Linux特定的文件系统（如ext4），则需要在安装Linux时进行格式化。完成设置后，点击“下一步”。</p>
+<p>5.完成分区创建：检查所有设置是否正确无误，然后点击“完成”来创建新分区。完成后，您会看到新的分区在磁盘管理中显示。</p>
+<p>第四步：安装Linux系统</p>
+<p>1.准备安装介质：确保您的Linux发行版光盘镜像文件已经下载完成，并且已经制作成启动U盘或者烧录到CD/DVD上。</p>
+<p>2.重启计算机：插入启动介质，然后重启您的计算机。</p>
+<p>3.进入BIOS/UEFI设置：在计算机启动过程中，进入BIOS/UEFI设置（通常是在启动时按F2、Del或其他特定键，我的联想是F12），并设置从U盘启动。</p>
+<p>4.启动Linux安装程序：计算机将从启动介质加载Linux安装程序。按照屏幕上的指示进行操作。</p>
+<p>5.选择安装位置：在安装过程中，选择“自定义分区”或类似选项，然后选择您刚刚创建的新分区作为安装Linux的位置。</p>
+<p>6.格式化分区：如果之前没有格式化分区，安装程序通常会提示您格式化分区。选择“ext4”或其他适合您Linux发行版的文件系统类型。</p>
+<p>7.完成安装：继续按照安装向导的步骤完成安装。这可能包括设置用户账户、网络设置等。</p>
+<p>8.重启并启动Linux：安装完成后，从启动介质中移除U盘，并重启计算机。现在，您应该能够启动并使用您的新Linux系统了。</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2024 <a href="https://ktkl123.github.io/">My New Hugo Site</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
