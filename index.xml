@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>My New Hugo Site</title>
-    <link>https://ktkl123.github.io/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 13 Mar 2024 22:04:58 +0800</lastBuildDate>
-    <atom:link href="https://ktkl123.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>卡塔库栗的博客</title>
-      <link>https://ktkl123.github.io/post/second-page/</link>
+      <link>http://localhost:1313/post/second-page/</link>
       <pubDate>Wed, 13 Mar 2024 22:04:58 +0800</pubDate>
-      <guid>https://ktkl123.github.io/post/second-page/</guid>
+      <guid>http://localhost:1313/post/second-page/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>https://ktkl123.github.io/post/linux%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/</link>
+      <link>http://localhost:1313/post/linux%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ktkl123.github.io/post/linux%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/</guid>
+      <guid>http://localhost:1313/post/linux%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/</guid>
       <description>Linux系统安装 安装前准备： 安装介质和系统（U盘、光盘、硬盘等）
 安装的空闲设备（新加硬盘或者为自己电脑安装文件分区）
 第一步：在Linux官网下载linux光盘文件镜像 进入Linux的官方网站Enterprise Open Source and Linux | Ubuntu后，选择右上角的get Ubuntu选择下载，把下载好的文件拷到自己的u盘上。
@@ -50,9 +50,9 @@
     </item>
     <item>
       <title></title>
-      <link>https://ktkl123.github.io/post/%E5%8D%95%E7%A1%AC%E7%9B%98uefi&#43;windows1011%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85ubuntu%E7%9A%84%E4%B8%80%E7%A7%8D%E6%95%85%E9%9A%9C%E6%83%85%E5%86%B5%E5%AF%BC%E8%87%B4%E8%BF%9B%E4%B8%8D%E5%8E%BBwindows%E7%B3%BB%E7%BB%9F/</link>
+      <link>http://localhost:1313/post/%E5%8D%95%E7%A1%AC%E7%9B%98uefi&#43;windows1011%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85ubuntu%E7%9A%84%E4%B8%80%E7%A7%8D%E6%95%85%E9%9A%9C%E6%83%85%E5%86%B5%E5%AF%BC%E8%87%B4%E8%BF%9B%E4%B8%8D%E5%8E%BBwindows%E7%B3%BB%E7%BB%9F/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ktkl123.github.io/post/%E5%8D%95%E7%A1%AC%E7%9B%98uefi&#43;windows1011%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85ubuntu%E7%9A%84%E4%B8%80%E7%A7%8D%E6%95%85%E9%9A%9C%E6%83%85%E5%86%B5%E5%AF%BC%E8%87%B4%E8%BF%9B%E4%B8%8D%E5%8E%BBwindows%E7%B3%BB%E7%BB%9F/</guid>
+      <guid>http://localhost:1313/post/%E5%8D%95%E7%A1%AC%E7%9B%98uefi&#43;windows1011%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85ubuntu%E7%9A%84%E4%B8%80%E7%A7%8D%E6%95%85%E9%9A%9C%E6%83%85%E5%86%B5%E5%AF%BC%E8%87%B4%E8%BF%9B%E4%B8%8D%E5%8E%BBwindows%E7%B3%BB%E7%BB%9F/</guid>
       <description>单硬盘UEFI+Windows10/11环境下安装Ubuntu的一种故障情况导致进不去Windows系统 故障情况还原：单硬盘UEFI+Windows10/11环境下安装Ubuntu后，从Ubuntu启动菜单选择Windows11，会显示 错误：未知的文件系统
 ![f6746ba1ece697774700e7f00db12d2](D:\weixinhuancun\WeChat Files\wxid_zaf72ri06sag22\FileStorage\Temp\f6746ba1ece697774700e7f00db12d2.png)![ba8da75c465be98ff46e1bf7df40d7b](D:\weixinhuancun\WeChat Files\wxid_zaf72ri06sag22\FileStorage\Temp\ba8da75c465be98ff46e1bf7df40d7b.png)
 原因分析：存放EFI文件的分区（ESP分区）中，由于安装时设置的错误，导致Ubuntu启动菜单无法读取引导Windows的安装文件。只能先进入PE环境把ESP分区中ubuntu文件夹删除，让其能够进入Windows系统。
