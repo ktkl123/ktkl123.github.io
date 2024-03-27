@@ -76,5 +76,20 @@
 ![de08ff2b14ad0f1516eb949f96e920c](D:\weixinhuancun\WeChat Files\wxid_zaf72ri06sag22\FileStorage\Temp\de08ff2b14ad0f1516eb949f96e920c.png)
 安装完毕后，开机时选择相应的启动项进入相应的系统，一般来说默认进入Windows系统</description>
     </item>
+    <item>
+      <title></title>
+      <link>https://ktkl123.github.io/third-post/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ktkl123.github.io/third-post/</guid>
+      <description>Ubuntu通过第三方应用商城安装微信教程 第一步：安装应用商城 首先打开这个网站https://gitee.com/spark-store-project/spark-store/releases/tag/4.2.10安装amd64版本
+下载之后右键，选择用其他软件方式打开（直译）
+选择软件安装
+安装
+输入密码并确认
+显示有一个垃圾桶的时候，就是已经安装完毕了
+第二步 安装微信 找微信Universal版，点下载并安装，他会自动安装
+安装完成
+问题：截屏会卡bug，可能是从国产linux系统上移植过来的原因 </description>
+    </item>
   </channel>
 </rss>
